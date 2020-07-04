@@ -1,0 +1,24 @@
+{
+  "name": "restapibecerin",
+  "version": "1.0.0",
+  "description": "restapi becerin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eva-ratna-palupi/uas_restapi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "eva ratna palupi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eva-ratna-palupi/uas_restapi/issues"
+  },
+  "homepage": "https://github.com/eva-ratna-palupi/uas_restapi#readme"
+}
