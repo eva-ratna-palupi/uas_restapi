@@ -36,3 +36,20 @@ exports.tambahproduk = function(req,res) {
             }
         });
 };
+
+//mengubah data berdasarkan id
+exports.ubahproduk = function (req, res) {
+    var id_produk = req.body.id_produk;
+    var nama = req.body.nama;
+    var jumlah = req.body.jumlah;
+    var harga = req.body.harga;
+
+    connection.query('UPDATE tb_produk SET nama=?, jumlah=?, harga=? WHERE id_produk=?', [nama,jumlah,harga,id_produk],
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Berhasil Ubah Data Produk", res)
+            }
+        });
+}

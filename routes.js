@@ -11,4 +11,7 @@ module.exports= function(app){
     
     app.route('/tambahproduk')
         .post(jsonku.tambahproduk);
+    
+    app.route('/ubahproduk')
+        .put(jsonku.ubahproduk);
 }
