@@ -53,3 +53,16 @@ exports.ubahproduk = function (req, res) {
             }
         });
 }
+
+//menghapus data produk berdasarkan id
+exports.hapusproduk = function (req, res) {
+    var id = req.body.id_produk;
+    connection.query('DELETE FROM tb_produk WHERE id_produk=?',[id],
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Berhasil Hapus Data Produk", res)
+            }
+        });
+}
