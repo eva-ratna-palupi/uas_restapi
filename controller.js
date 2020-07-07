@@ -17,3 +17,22 @@ exports.tampilsemuaproduk = function (req, res) {
         }
     });
 };
+
+//menambahkan data produk
+exports.tambahproduk = function(req,res) {
+    var nama = req.body.nama;
+    var jumlah = req.body.jumlah;
+    var harga = req.body.harga;
+
+    connection.query('INSERT INTO tb_produk (nama,jumlah,harga) VALUES(?,?,?)',
+    [nama,jumlah,harga],
+    function (error,rows,fields)
+    {
+            if(error){
+                console.log(error);
+            }
+            else{
+                response.ok("Berhasil menambahkan data Produk",res)
+            }
+        });
+};

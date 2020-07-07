@@ -8,4 +8,7 @@ module.exports= function(app){
 
     app.route('/tampilproduk')
         .get(jsonku.tampilsemuaproduk);
+    
+    app.route('/tambahproduk')
+        .post(jsonku.tambahproduk);
 }
